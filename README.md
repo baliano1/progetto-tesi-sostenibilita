@@ -65,6 +65,10 @@ Di seguito quale immagine della pagina web:
 
 <img width="1908" height="917" alt="Schermata-Iniziale" src="https://github.com/user-attachments/assets/2a53a83e-15eb-4162-b561-f22b3f3c2db6" />
 
+
+
 <img width="1904" height="917" alt="Schermata_Intermedia" src="https://github.com/user-attachments/assets/62f3ad4e-cab4-4b0a-8f9d-2c6cc6d4375d" />
+
+
 
 <img width="1903" height="919" alt="Linea_temporale" src="https://github.com/user-attachments/assets/af4746c4-083c-46b4-871b-5e149db46443" />
