@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terna - Report di Sostenibilità</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Terna_logo.svg" alt="Logo Terna">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#visione">Home</a></li>
+                    <li><a href="#dati-chiave">Report</a></li>
+                    <li><a href="#strategia">Strategia</a></li>
+                    <li><a href="#progetti">Progetti</a></li>
+                    <li><a href="#reports">Download</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="visione" class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1>La Via dell'Energia Sostenibile</h1>
+                <p>Il nostro impegno per una "Just Transition": un futuro energetico che sia non solo verde e digitale, ma anche equo e inclusivo per tutti.</p>
+            </div>
+        </section>
+
+        <section id="dati-chiave" class="data-section">
+            <div class="container">
+                <h2>La Sostenibilità in Numeri: Highlights 2023</h2>
+                <div class="text-content intro">
+                    <p>L'impegno di Terna per una transizione giusta si traduce in risultati concreti. Questi dati evidenziano la nostra crescita sostenibile: dagli investimenti record, alla gestione delle risorse, fino alla sicurezza e valorizzazione del nostro capitale umano.</p>
+                </div>
+                <div class="grid-container">
+                    
+                    <div class="interactive-card-wrapper">
+                        <input type="checkbox" id="card-toggle-1" class="card-toggle">
+                        <label for="card-toggle-1" class="info-card interactive">
+                            <div class="card-front">
+                                <h3>Investimenti Totali (Mld €)</h3>
+                                <div class="chart">
+                                    <div class="bar-container"><div class="bar" style="height: 70%;"><span class="bar-value">1,8</span></div><p class="year">2022</p></div>
+                                    <div class="bar-container"><div class="bar" style="height: 100%;"><span class="bar-value">2,3</span></div><p class="year">2023</p></div>
+                                </div>
+                                <p class="card-description">Un +30,4% di crescita per accelerare la transizione. <strong>Clicca per dettagli.</strong></p>
+                            </div>
+                            <div class="card-back">
+                                <h4>Dettaglio Investimenti 2023</h4>
+                                <p>I 2,29 mld di € sono stati così ripartiti:</p>
+                                <ul>
+                                    <li><strong>Sviluppo (1.217 M€):</strong> Per potenziare le interconnessioni e integrare le rinnovabili.</li>
+                                    <li><strong>Rinnovo (490 M€):</strong> Per ammodernare gli asset esistenti.</li>
+                                    <li><strong>Sicurezza (276 M€):</strong> Per aumentare la resilienza della rete.</li>
+                                </ul>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="interactive-card-wrapper">
+                        <input type="checkbox" id="card-toggle-2" class="card-toggle">
+                        <label for="card-toggle-2" class="info-card interactive">
+                             <div class="card-front">
+                                <h3>Gestione Rifiuti 2023</h3>
+                                <div class="donut-chart" style="--percentage: 87;"><span class="donut-value">87%</span></div>
+                                <div class="legend">
+                                    <div><span class="legend-dot green"></span>Recuperati</div>
+                                    <div><span class="legend-dot gray"></span>Smaltiti</div>
+                                </div>
+                                <p class="card-description">Impegno concreto verso l'economia circolare. <strong>Clicca per dettagli.</strong></p>
+                            </div>
+                             <div class="card-back">
+                                <h4>Approccio all'Economia Circolare</h4>
+                                <p>L'87% dei rifiuti è stato avviato a recupero, con picchi di eccellenza:</p>
+                                <ul>
+                                    <li><strong>Metalli e Oli:</strong> Recupero superiore al 95% per i metalli e al 90% per gli oli dielettrici.</li>
+                                    <li><strong>Batterie:</strong> 100% di recupero per quelle al piombo e nichel.</li>
+                                    <li><strong>Gas SF6:</strong> Evitate 55.930 t di CO₂ eq. grazie alla rigenerazione.</li>
+                                </ul>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="interactive-card-wrapper">
+                        <input type="checkbox" id="card-toggle-3" class="card-toggle">
+                        <label for="card-toggle-3" class="info-card interactive">
+                             <div class="card-front">
+                                <h3>Rete Gestita (Migliaia di Km)</h3>
+                                <div class="chart">
+                                    <div class="bar-container"><div class="bar" style="height: 96%;"><span class="bar-value">72,6</span></div><p class="year">2015</p></div>
+                                    <div class="bar-container"><div class="bar" style="height: 100%;"><span class="bar-value">75,1</span></div><p class="year">2023</p></div>
+                                </div>
+                                <p class="card-description">Crescita costante dell'infrastruttura a servizio del Paese. <strong>Clicca per dettagli.</strong></p>
+                            </div>
+                             <div class="card-back">
+                                <h4>Dettaglio Rete di Trasmissione</h4>
+                                <p>Al 31/12/2023, la rete si estendeva per 75.140 km. La composizione per tipologia:</p>
+                                <ul>
+                                    <li><strong>Linee Aeree:</strong> 70.865 km (94%)</li>
+                                    <li><strong>Cavi Interrati:</strong> 2.510 km</li>
+                                    <li><strong>Cavi Sottomarini:</strong> 1.765 km</li>
+                                </ul>
+                            </div>
+                        </label>
+                    </div>
+                    
+                    <div class="interactive-card-wrapper">
+                        <input type="checkbox" id="card-toggle-4" class="card-toggle">
+                        <label for="card-toggle-4" class="info-card interactive">
+                             <div class="card-front">
+                                <h3>Indice Frequenza Infortuni</h3>
+                                <div class="chart">
+                                    <div class="bar-container"><div class="bar" style="height: 100%; --bar-color1: #f39c12; --bar-color2: #e67e22;"><span class="bar-value">2,9</span></div><p class="year">2022</p></div>
+                                    <div class="bar-container"><div class="bar" style="height: 79%; --bar-color1: #f39c12; --bar-color2: #e67e22;"><span class="bar-value">2,3</span></div><p class="year">2023</p></div>
+                                </div>
+                                <p class="card-description">Miglioramento della sicurezza per le nostre persone. <strong>Clicca per dettagli.</strong></p>
+                            </div>
+                            <div class="card-back">
+                                <h4>Programma "Eccellenza in Sicurezza"</h4>
+                                <p>La sicurezza è una priorità. L'indice di frequenza infortuni (per milione di ore lavorate) è sceso da 2,9 a 2,3.</p>
+                                <ul>
+                                    <li><strong>Obiettivo Raggiunto:</strong> Anche per il 2023 "zero infortuni mortali" per i dipendenti Terna.</li>
+                                    <li><strong>Cultura Proattiva:</strong> Si promuove la segnalazione di "near miss" (mancati incidenti) per prevenire i rischi.</li>
+                                </ul>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="interactive-card-wrapper">
+                        <input type="checkbox" id="card-toggle-5" class="card-toggle">
+                        <label for="card-toggle-5" class="info-card interactive">
+                             <div class="card-front">
+                                <h3>Ore di Formazione (Migliaia)</h3>
+                                <div class="chart">
+                                    <div class="bar-container"><div class="bar" style="height: 74%;"><span class="bar-value">175k</span></div><p class="year">2022</p></div>
+                                    <div class="bar-container"><div class="bar" style="height: 100%;"><span class="bar-value">235k</span></div><p class="year">2023</p></div>
+                                </div>
+                                <p class="card-description">Investimento costante sullo sviluppo delle competenze. <strong>Clicca per dettagli.</strong></p>
+                            </div>
+                            <div class="card-back">
+                                <h4>Sviluppo del Capitale Umano</h4>
+                                <p>Nel 2023 sono state erogate 235.352 ore di formazione (+34% vs 2022), con il 100% dei dipendenti coinvolto.</p>
+                                <ul>
+                                    <li><strong>Terna Academy:</strong> L'hub di formazione del Gruppo ha promosso corsi su transizione energetica, sostenibilità e competenze digitali.</li>
+                                    <li><strong>Tyrrhenian Lab:</strong> Proseguito il Master per formare i talenti del futuro.</li>
+                                </ul>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="interactive-card-wrapper">
+                        <input type="checkbox" id="card-toggle-6" class="card-toggle">
+                        <label for="card-toggle-6" class="info-card interactive">
+                            <div class="card-front">
+                                <h3>Copertura Fabbisogno da FER</h3>
+                                <div class="donut-chart" style="--percentage: 37;"><span class="donut-value">37%</span></div>
+                                <div class="legend">
+                                    <div><span class="legend-dot green"></span>Rinnovabili</div>
+                                    <div><span class="legend-dot gray"></span>Altre Fonti</div>
+                                </div>
+                                <p class="card-description">Un sistema elettrico sempre più verde e indipendente. <strong>Clicca per dettagli.</strong></p>
+                            </div>
+                            <div class="card-back">
+                                <h4>Transizione Verso le Rinnovabili</h4>
+                                <p>Nel 2023, le FER hanno coperto il 36,8% del fabbisogno, in crescita di 5,8 punti % rispetto al 2022.</p>
+                                <ul>
+                                    <li><strong>Record Eolico:</strong> L'11 novembre la produzione eolica ha coperto il 24% del fabbisogno istantaneo.</li>
+                                    <li><strong>Record Solare:</strong> Il 17 giugno il fotovoltaico ha coperto il 50% del fabbisogno istantaneo.</li>
+                                </ul>
+                            </div>
+                        </label>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="strategia" class="content-section">
+            <div class="container">
+                <h2>La Nostra Strategia</h2>
+                <div class="text-content">
+                    <p>Il fulcro della nostra strategia è il concetto di **"Twin Transition for a Just Transition"**. Questo approccio guida l'azienda nel suo ruolo di regista del sistema energetico, riconoscendo che la trasformazione energetica non può essere separata dalla rivoluzione digitale e deve avvenire garantendo equità e inclusività sociale. I pilastri sono la **Transizione Energetica** (decarbonizzazione e rinnovabili) e la **Transizione Digitale** (IoT, AI, smart grids), realizzate in un'ottica di giustizia sociale.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="progetti" class="content-section alternate-bg">
+            <div class="container">
+                <h2>Progetti per il Futuro: Piano 2024-2028</h2>
+                <div class="grid-container">
+                    <div class="static-card project-card">
+                        <img src="https://images.pexels.com/photos/159358/construction-site-build-construction-work-159358.jpeg" alt="Cantiere di una grande infrastruttura energetica">
+                        <h3>Tyrrhenian Link</h3>
+                        <p>Infrastruttura strategica da 3,7 mld € per collegare Sicilia, Sardegna e penisola italiana, favorendo l'integrazione delle rinnovabili e la sicurezza del sistema.</p>
+                    </div>
+                    <div class="static-card project-card">
+                        <img src="https://images.pexels.com/photos/3560168/pexels-photo-3560168.jpeg" alt="Impianti eolici offshore">
+                        <h3>Adriatic Link</h3>
+                        <p>Elettrodotto sottomarino per unire le due sponde dell'Adriatico, aumentando la capacità di trasporto dell'energia rinnovabile dal Sud a Nord.</p>
+                    </div>
+                    <div class="static-card project-card">
+                        <img src="https://images.pexels.com/photos/595804/pexels-photo-595804.jpeg" alt="Tecnico al lavoro su server e dati">
+                        <h3>Innovazione e Digitalizzazione</h3>
+                        <p>Quasi 2 miliardi di euro per digitalizzare la rete con tecnologie avanzate come IoT e AI, per una gestione più efficiente e predittiva.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="reports" class="content-section">
+            <div class="container">
+                <h2>I Nostri Report</h2>
+                <div class="report-list">
+                    <div class="report-item">
+                        <div class="report-icon"><img src="https://img.icons8.com/ios-filled/100/40C057/document.png" alt="Icona Report"/></div>
+                        <div class="report-info">
+                            <h3>Rapporto Integrato 2023</h3>
+                            <p>Analisi completa delle nostre performance economiche, ambientali, sociali e di governance dell'ultimo anno.</p>
+                            <a href="Terna_Rapporto_Integrato_2023_8dc5f149a3e8147.pdf" class="download-btn" download>Scarica PDF</a>
+                        </div>
+                    </div>
+                    <div class="report-item">
+                        <div class="report-icon"><img src="https://img.icons8.com/ios/100/1A5278/archive.png" alt="Icona Archivio"/></div>
+                        <div class="report-info">
+                            <h3>Archivio Report</h3>
+                            <p>Consulta i report di sostenibilità e le dichiarazioni non finanziarie degli anni precedenti.</p>
+                            <a href="https://www.terna.it/it/sostenibilita/report-sostenibilita" target="_blank" class="download-btn">Visita l'Archivio</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Terna S.p.A. - Rete Elettrica Nazionale | Progetto Sviluppato per Tesi di Laurea</p>
+        </div>
+    </footer>
+
+</body>
+</html>
+
