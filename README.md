@@ -1,4 +1,4 @@
-# Progetto di Tesi: Pagina Web per Report di Sostenibilità Terna
+# Progetto di Tesi: Sviluppo di una pagina web per il download dei report di sostenibilità di un’impresa del settore secondario
 
 Questo repository contiene il codice sorgente per una pagina web sviluppata come progetto di tesi. L'obiettivo era selezionare un'azienda del settore secondario, analizzare il suo report di sostenibilità e creare un'interfaccia web per la sua consultazione e download.
 
