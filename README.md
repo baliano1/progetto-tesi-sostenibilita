@@ -78,3 +78,18 @@ Il foglio di stile è stato organizzato per essere leggibile, manutenibile e pot
 * **Layout Responsivo**: L'intera pagina è responsive grazie all'uso combinato di Flexbox e CSS Grid. Le Media Queries (`@media`) vengono usate per adattare il layout a schermi più piccoli, garantendo una perfetta visualizzazione su ogni dispositivo.
 * **Stili Interattivi**: La logica per l'effetto "flip" delle card è gestita dal selettore `:checked`. Quando la checkbox invisibile viene selezionata, il selettore `.card-toggle:checked ~ .info-card.interactive` applica la rotazione 3D.
 * **Grafici CSS Puri**: Tutti i grafici (barre e ciambella) non sono immagini, ma elementi HTML stilizzati con CSS. Le barre sono `div` la cui altezza è animata, mentre il grafico a ciambella usa la proprietà `conic-gradient`.
+
+### Anteprima del progetto
+
+<img width="1883" height="857" alt="image" src="https://github.com/user-attachments/assets/696427ae-3389-4758-ac13-efef6a017f2f" />
+
+<img width="1897" height="797" alt="image" src="https://github.com/user-attachments/assets/f92bacf0-4ab2-4d39-a4a2-62010270f9b2" />
+
+<img width="1888" height="788" alt="image" src="https://github.com/user-attachments/assets/d91047ff-3fbc-4883-903c-0617af07cd4c" />
+
+<img width="1891" height="795" alt="image" src="https://github.com/user-attachments/assets/6fe0263c-d1c1-4e81-8eb7-fd8cdbeab7f9" />
+
+<img width="1890" height="755" alt="image" src="https://github.com/user-attachments/assets/0ded9344-aa34-4791-9f8c-a7936edfa5ba" />
+
+
+
