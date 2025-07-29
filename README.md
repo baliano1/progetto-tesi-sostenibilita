@@ -7,6 +7,28 @@ Questo repository contiene il progetto di tesi incentrato sullo sviluppo di una 
 
 ---
 
+## Download e Verifica del Progetto
+
+Per scaricare e testare il progetto in locale, segui questi semplici passaggi.
+
+### 1. Scaricare i File
+
+Il modo più semplice per ottenere i file è scaricare l'intero repository come file ZIP.
+
+* Vai alla pagina principale di questo repository su GitHub.
+* Clicca sul pulsante verde **`< > Code`**.
+* Dal menu a tendina, seleziona **`Download ZIP`**.
+* Estrai il contenuto del file `.zip` in una cartella sul tuo computer. Al suo interno troverai `index.html` e `style.css`.
+
+### 2. Eseguire le Verifiche
+
+Una volta che hai i file nella stessa cartella:
+
+* Apri il file `index.html` con un qualsiasi browser web (es. Google Chrome, Firefox, Edge).
+* La pagina si caricherà istantaneamente e potrai navigare tra le sezioni, interagire con le card e cliccare sui link per verificare il funzionamento completo del progetto.
+
+---
+
 ## Obiettivo del Progetto
 
 Lo scopo principale del progetto è stato quello di progettare e sviluppare una pagina web single-page che fungesse da portale per i report di sostenibilità di Terna. I requisiti chiave erano:
