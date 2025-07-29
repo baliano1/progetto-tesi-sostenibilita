@@ -1,4 +1,4 @@
-
+/**
  * Progetto: Tesi di Laurea - Pagina Web per Report di Sostenibilità Terna
  * Descrizione: Questo foglio di stile definisce l'intero aspetto visivo, il layout responsivo
  * e le interazioni complesse della pagina web, utilizzando esclusivamente
@@ -6,51 +6,33 @@
  */
 
 /* --- SEZIONE 1: RESET E STILI GLOBALI --- */
-/*
- * In questa sezione vengono definite le fondamenta stilistiche del progetto.
- * L'uso di variabili CSS (:root) è una scelta strategica per garantire la coerenza
- * e la manutenibilità del codice. Modificando un valore qui, il cambiamento
- * si riflette su tutta la pagina.
- */
 :root {
-    /* Definizione della palette di colori basata sull'identità di Terna e sui valori della sostenibilità. */
-    --primary-color: #00437a;      /* Blu istituzionale di Terna */
-    --secondary-color: #009879;    /* Verde per elementi legati alla sostenibilità */
-    --accent-color: #40C057;       /* Verde brillante per accenti e call-to-action */
-    --orange-accent: #f39c12;      /* Colore di contrasto per i grafici */
-    
-    /* Definizione di colori neutri e di testo per garantire la leggibilità. */
-    --light-gray: #ecf0f1;
-    --text-color: #333;
+    --primary-color: #00437a;
+    --secondary-color: #009879;
+    --accent-color: #40C057;
+    --orange-accent: #f39c12;
+    --text-color: #00437a;
     --light-text-color: #f4f4f4;
-    --background-color: #f9fafb;  /* Sfondo principale, leggermente grigio per non affaticare la vista */
+    --background-color: #f9fafb;
+    --light-gray: #ecf0f1;
 }
 
-/* * Reset di base: Rimuove i margini e i padding predefiniti dei browser per un controllo
- * completo sul layout. Imposta il font principale e stili di base per il testo.
- * 'scroll-behavior: smooth' migliora l'esperienza utente durante la navigazione interna.
- */
 body, html {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif; /* Font scelto per la sua eccellente leggibilità su schermo */
+    font-family: 'Roboto', sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
     line-height: 1.6;
     scroll-behavior: smooth;
 }
 
-/* * Classe 'container': Un contenitore centrato con una larghezza massima. 
- * Questo previene che il layout si estenda eccessivamente su schermi molto grandi, 
- * migliorando la leggibilità.
- */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* Stile di base per i titoli principali delle sezioni. */
 h2 {
     text-align: center;
     font-size: 2.5rem;
@@ -61,67 +43,41 @@ h2 {
 
 
 /* --- SEZIONE 2: ANIMAZIONI GLOBALI --- */
-/*
- * Vengono definite delle animazioni riutilizzabili tramite @keyframes.
- * Questo approccio permette di applicare effetti di entrata agli elementi
- * in modo coerente e manutenibile.
- */
-
-/* Animazione 'fadeIn': Fa apparire un elemento con una dissolvenza e una leggera traslazione verticale. */
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-/* Animazione 'growBar': Simula la crescita verticale delle barre nei grafici. */
 @keyframes growBar {
-    from {
-        transform: scaleY(0); /* Parte da una scala verticale pari a zero */
-    }
-    to {
-        transform: scaleY(1); /* Arriva alla sua altezza finale */
-    }
+    from { transform: scaleY(0); }
+    to { transform: scaleY(1); }
 }
 
 
 /* --- SEZIONE 3: HEADER E NAVIGAZIONE --- */
-/*
- * L'header è progettato per essere sempre visibile e funzionale.
- * La proprietà 'position: sticky' lo fissa in cima alla pagina durante lo scorrimento,
- * migliorando l'usabilità. 'backdrop-filter: blur(10px)' crea un effetto vetro smerigliato
- * che lo rende esteticamente moderno.
- */
 header {
     background-color: rgba(0, 67, 122, 0.9);
     backdrop-filter: blur(10px);
     padding: 1rem 0;
     position: sticky;
     top: 0;
-    z-index: 1000; /* Un z-index elevato assicura che l'header rimanga sopra tutti gli altri elementi. */
+    z-index: 1000;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-/* Layout Flexbox per allineare logo e navigazione sull'asse orizzontale. */
 header .container {
     display: flex;
-    justify-content: space-between; /* Spinge logo e navigazione ai lati opposti */
-    align-items: center; /* Allinea verticalmente gli elementi */
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* La regola 'filter' viene usata per trasformare il logo SVG (a colori) in un'icona bianca,
- * garantendo un contrasto perfetto con lo sfondo scuro dell'header. */
-header .logo img {
-    height: 40px;
-    filter: brightness(0) invert(1);
+header .logo a {
+    color: var(--light-text-color);
+    font-weight: 700;
+    font-size: 1.8rem;
+    text-decoration: none;
 }
 
-/* Layout Flexbox per la lista dei link di navigazione. */
 header nav ul {
     list-style: none;
     padding: 0;
@@ -131,7 +87,6 @@ header nav ul {
 
 header nav ul li { margin-left: 25px; }
 
-/* Stile dei link di navigazione, con un effetto di transizione al passaggio del mouse. */
 header nav a {
     color: var(--light-text-color);
     text-decoration: none;
@@ -146,11 +101,6 @@ header nav a:hover {
 
 
 /* --- SEZIONE 4: SEZIONE HERO --- */
-/*
- * La sezione Hero è la prima area visibile e deve avere un forte impatto visivo.
- * L'immagine di sfondo è impostata per coprire l'intera area disponibile.
- * 'position: relative' è fondamentale per posizionare correttamente l'overlay e il testo.
- */
 .hero {
     height: 60vh;
     background-image: url('https://images.pexels.com/photos/433308/pexels-photo-433308.jpeg');
@@ -164,7 +114,6 @@ header nav a:hover {
     color: var(--light-text-color);
 }
 
-/* Overlay semitrasparente: migliora la leggibilità del testo sopra l'immagine di sfondo. */
 .hero-overlay {
     position: absolute;
     top: 0;
@@ -174,18 +123,17 @@ header nav a:hover {
     background: linear-gradient(to top, rgba(0, 67, 122, 0.8), rgba(0, 20, 40, 0.4));
 }
 
-/* Contenitore per il testo, posizionato sopra l'overlay grazie a 'z-index'. */
 .hero-content {
     position: relative;
     z-index: 2;
     max-width: 800px;
     padding: 0 20px;
-    animation: fadeIn 1s ease-out; /* Applica l'animazione di entrata definita in precedenza */
+    animation: fadeIn 1s ease-out;
 }
 .hero h1 {
     font-size: 3.2rem;
     margin-bottom: 1rem;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* Ombra sul testo per ulteriore leggibilità */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
 }
 .hero p {
     font-size: 1.3rem;
@@ -194,70 +142,36 @@ header nav a:hover {
 
 
 /* --- SEZIONE 5: LAYOUT DELLE SEZIONI E GRIGLIE --- */
-/* Stili comuni per tutte le sezioni di contenuto per garantire coerenza. */
 .data-section, .content-section { padding: 80px 0; }
 .content-section.alternate-bg { background-color: #ffffff; }
 
-/* Contenitore per i testi introduttivi delle sezioni. */
 .text-content { text-align: center; max-width: 800px; margin: 0 auto 50px auto; }
-.text-content p { font-weight: 300; color: #555; }
+.text-content p { font-weight: 300; }
 .text-content.intro p { font-size: 1.1rem; }
 
-/* * Layout a Griglia (CSS Grid): una delle tecnologie più potenti e moderne per la creazione di layout.
- * 'grid-template-columns: repeat(auto-fit, minmax(320px, 1fr))' è una regola chiave per la responsività:
- * - 'repeat': ripete la regola per tutti gli elementi.
- * - 'auto-fit': crea quante più colonne possibili nello spazio disponibile.
- * - 'minmax(320px, 1fr)': ogni colonna avrà una larghezza minima di 320px e si estenderà per occupare lo spazio rimanente (1fr).
- * Questo crea una griglia che si adatta automaticamente senza bisogno di complesse media query.
- * Per approfondire: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout
- */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 30px;
 }
-.grid-container.two-cols {
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-}
 
 
 /* --- SEZIONE 6: CARD INTERATTIVA ("FLIP CARD") --- */
-/*
- * Questa è la sezione tecnicamente più complessa. L'effetto di rotazione 3D
- * è realizzato con la tecnica del "Checkbox Hack", che permette di creare interattività
- * senza l'uso di JavaScript.
- * Per approfondire la tecnica: https://css-tricks.com/the-checkbox-hack/
- */
 .interactive-card-wrapper {
-    perspective: 1200px; /* Imposta una prospettiva 3D, essenziale per l'effetto di rotazione. */
-    min-height: 420px;   /* Garantisce che il contenitore abbia spazio sufficiente per la card. */
+    perspective: 1200px;
+    min-height: 420px;
     position: relative;
 }
-.card-toggle {
-    display: none; /* La checkbox di controllo è completamente nascosta. Funziona come un interruttore logico. */
-}
+.card-toggle { display: none; }
 .info-card.interactive {
     position: absolute;
     width: 100%;
     height: 100%;
-    transform-style: preserve-3d; /* Permette agli elementi figli di mantenere la loro posizione 3D. */
-    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Transizione fluida per la rotazione. */
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     cursor: pointer;
 }
-/*
- * Selettore chiave del Checkbox Hack:
- * - '.card-toggle:checked': seleziona la checkbox quando è attivata (dal click sulla label).
- * - '~': il selettore di fratelli successivi.
- * - '.info-card.interactive': l'elemento su cui applicare la trasformazione.
- * In sintesi: "quando la checkbox è attiva, applica una rotazione di 180 gradi al suo fratello .info-card".
- */
-.card-toggle:checked ~ .info-card.interactive {
-    transform: rotateY(180deg);
-}
-/*
- * Le due facce della card sono posizionate in modo assoluto una sopra l'altra.
- * 'backface-visibility: hidden' è cruciale: nasconde la faccia posteriore di un elemento durante la rotazione.
- */
+.card-toggle:checked ~ .info-card.interactive { transform: rotateY(180deg); }
 .card-front, .card-back {
     position: absolute;
     width: 100%;
@@ -268,7 +182,7 @@ header nav a:hover {
     justify-content: center;
     align-items: center;
     padding: 25px;
-    box-sizing: border-box; /* Assicura che padding e bordi siano inclusi nel calcolo delle dimensioni. */
+    box-sizing: border-box;
     border-radius: 15px;
     background: #ffffff;
     box-shadow: 0 8px 20px rgba(0, 67, 122, 0.08);
@@ -281,17 +195,11 @@ header nav a:hover {
 .card-back p { font-size: 0.95rem; text-align: left; }
 .card-back ul { list-style: none; padding: 0; text-align: left; width: 100%; }
 .card-back li { margin-bottom: 10px; background-color: rgba(255,255,255,0.1); padding: 8px; border-radius: 4px;}
-.card-description { font-size: 0.9rem; color: #666; margin-top: auto; padding-top: 15px; }
+.card-description { font-size: 0.9rem; margin-top: auto; padding-top: 15px; color: #888; }
 .card-description strong { color: var(--secondary-color); }
 
 
-/* --- SEZIONE 7: STILI DEI GRAFICI CSS-PURI --- */
-/*
- * Tutti i grafici sono realizzati senza immagini, usando solo HTML e CSS.
- * Questo li rende leggeri, scalabili e facilmente aggiornabili.
- */
-
-/* Grafico a barre: realizzato con div la cui altezza è proporzionale al dato. */
+/* --- SEZIONE 7: GRAFICI E STRATEGIA --- */
 .chart { height: 180px; width: 100%; display: flex; justify-content: space-around; align-items: flex-end; margin: 20px 0; }
 .bar-container { display: flex; flex-direction: column; align-items: center; width: 60px; }
 .bar {
@@ -302,13 +210,12 @@ header nav a:hover {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    transform-origin: bottom; /* L'animazione di crescita parte dal basso. */
+    transform-origin: bottom;
     animation: growBar 1s ease-out forwards;
 }
 .bar-value { color: white; font-weight: bold; font-size: 1rem; padding-top: 8px; }
-.year { margin-top: 10px; font-weight: bold; font-size: 0.9rem; color: #555; }
+.year { margin-top: 10px; font-weight: bold; font-size: 0.9rem; }
 
-/* Grafico a ciambella: realizzato con la proprietà 'conic-gradient'. */
 .donut-chart {
     width: 150px;
     height: 150px;
@@ -318,11 +225,8 @@ header nav a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* 'conic-gradient' crea un gradiente a forma di cono, perfetto per i grafici a torta/ciambella.
-       La variabile '--percentage' viene passata dall'HTML per definire dinamicamente la grandezza della fetta. */
     background: conic-gradient(var(--accent-color) 0% calc(var(--percentage) * 1%), var(--light-gray) calc(var(--percentage) * 1%) 100%);
 }
-/* Lo pseudo-elemento '::before' crea il buco centrale della ciambella. */
 .donut-chart::before {
     content: '';
     position: absolute;
@@ -334,13 +238,32 @@ header nav a:hover {
 }
 .donut-value { position: relative; font-size: 1.8rem; font-weight: 700; color: var(--primary-color); z-index: 2; }
 .legend { display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; margin-top: 15px; font-size: 0.9rem; }
-.legend-dot { width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; }
+.legend-dot { display: inline-block; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; vertical-align: middle; }
 .legend-dot.green { background-color: var(--accent-color); }
 .legend-dot.gray { background-color: var(--light-gray); border: 1px solid #ccc; }
 
+.strategy-pillars {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+    text-align: center;
+}
+.pillar h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin: 15px 0;
+}
+.pillar p {
+    font-weight: 300;
+}
+.pillar-icon {
+    font-size: 3.5rem;
+    color: var(--secondary-color);
+}
 
-/* --- SEZIONE 8: STILI PER LE CARD NON INTERATTIVE --- */
-/* Stili di base per le card statiche, che condividono parte del design con quelle interattive. */
+
+/* --- SEZIONE 8: CARD STATICHE E TRAGUARDI --- */
 .static-card {
     background: #ffffff;
     border-radius: 15px;
@@ -349,7 +272,7 @@ header nav a:hover {
     box-shadow: 0 8px 20px rgba(0, 67, 122, 0.08);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     animation: fadeIn 0.5s ease-out forwards;
     border-top: 4px solid var(--accent-color);
 }
@@ -357,10 +280,74 @@ header nav a:hover {
 .static-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px; }
 .static-card h3 { color: var(--primary-color); }
 .static-card p { font-size: 0.95rem; }
-.card-icon { font-size: 3rem; margin-bottom: 15px; color: var(--secondary-color); }
+
+.traguardo-icon {
+    font-size: 3rem;
+    line-height: 1;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+}
+
+/* --- NUOVI STILI: SEZIONE TIMELINE --- */
+.timeline-container {
+    position: relative;
+    padding-top: 20px;
+    margin-top: 50px;
+}
+
+/* La linea orizzontale della timeline */
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 80%;
+    height: 4px;
+    background-color: var(--light-gray);
+}
+
+.timeline-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.timeline-item {
+    position: relative;
+    padding-top: 30px; /* Spazio per il cerchio */
+    text-align: center;
+}
+
+/* Il cerchio sulla linea */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: -6px; /* Posiziona il cerchio sopra la linea */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 16px;
+    height: 16px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+
+.timeline-content h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin: 10px 0 5px 0;
+}
+
+.timeline-content p {
+    font-size: 0.9rem;
+    font-weight: 300;
+}
 
 
 /* --- SEZIONE 9: SEZIONE DOWNLOAD --- */
+#reports {
+    background-color: var(--background-color); /* Sfondo leggermente grigio */
+}
 .report-list { display: flex; flex-direction: column; gap: 20px; }
 .report-item {
     display: flex;
@@ -373,11 +360,11 @@ header nav a:hover {
 }
 .report-item:hover {
     box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-    transform: translateY(-5px); /* Leggero effetto di sollevamento al passaggio del mouse */
+    transform: translateY(-5px);
 }
 .report-icon img { height: 50px; margin-right: 25px; }
 .report-info h3 { margin: 0 0 5px 0; color: var(--primary-color); }
-.report-info p { margin: 0 0 15px 0; max-width: 600px; font-size: 0.95rem; color: #555; }
+.report-info p { margin: 0 0 15px 0; max-width: 600px; font-size: 0.95rem; }
 .download-btn {
     display: inline-block;
     background-color: var(--secondary-color);
@@ -403,19 +390,37 @@ footer p { margin: 0; font-size: 0.9rem; }
 
 
 /* --- SEZIONE 11: MEDIA QUERIES PER LA RESPONSIVITÀ --- */
-/*
- * Le Media Queries sono il pilastro del Responsive Web Design. Permettono di applicare
- * stili specifici solo quando vengono soddisfatte determinate condizioni, come la larghezza
- * dello schermo. Qui viene definita una regola per schermi più piccoli di 768px (tablet e smartphone).
- */
 @media (max-width: 768px) {
-    header .container { flex-direction: column; }
-    header nav ul { margin-top: 1rem; flex-wrap: wrap; justify-content: center; }
+    header .container { flex-direction: column; gap: 1rem; }
+    header nav ul { margin-top: 0; flex-wrap: wrap; justify-content: center; }
+    header nav ul li { margin-left: 15px; margin-right: 15px; }
     .hero h1 { font-size: 2.5rem; }
     h2 { font-size: 2rem; }
-    /* Su schermi piccoli, la griglia diventa a colonna singola per una migliore leggibilità. */
     .grid-container, .grid-container.two-cols {
         grid-template-columns: 1fr;
     }
+    .report-item { flex-direction: column; text-align: center; }
+    .report-icon img { margin-right: 0; margin-bottom: 15px; }
+
+    /* Stili responsivi per la timeline */
+    .timeline-wrapper {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .timeline-container::before {
+        left: 30px;
+        top: 0;
+        width: 4px;
+        height: 100%;
+    }
+    .timeline-item {
+        text-align: left;
+        padding-top: 0;
+        padding-left: 50px;
+    }
+    .timeline-item::before {
+        left: 24px;
+        top: 5px;
+        transform: translateX(0);
+    }
 }
-```
