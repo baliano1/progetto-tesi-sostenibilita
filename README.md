@@ -1,5 +1,5 @@
 
-📄 Progetto di Tesi: Pagina di Sostenibilità Terna
+#📄 Progetto di Tesi: Pagina di Sostenibilità Terna
 Questo repository contiene il codice sorgente per una pagina web sviluppata come progetto di tesi. L'obiettivo era selezionare un'azienda del settore secondario, analizzare il suo report di sostenibilità e creare un'interfaccia web per la sua consultazione e download.
 
 🏢 Azienda Selezionata: Terna S.p.A.
